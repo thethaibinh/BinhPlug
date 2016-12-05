@@ -48,7 +48,7 @@ router.get('/edit', function(req, res, next) {
 
 router.get('/get/:name', function(req, res, next) {
   plugInfo.findOne({"name": req.params.name}, (err, plug) => {  
-    res.jsonp(plug);
+    res.jsonp(plug.status);
     //console.log(plug);
     res.end();
   });
